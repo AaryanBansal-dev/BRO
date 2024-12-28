@@ -1,2 +1,0 @@
-# BRO
-Borewell Rescue Operation
