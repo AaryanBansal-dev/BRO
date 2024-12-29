@@ -1,6 +1,6 @@
 import "./globals.css";
 import Navbar from "./components/navbar";
-
+import Footer from "./components/footer";
 export const metadata = {
   title: "BRO - Borewell Rescue Operation",
   description: "A robot that can help rescuing kids from Borewells.",
@@ -12,6 +12,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar></Navbar>
         <main>{children}</main>
+        <Footer></Footer>
       </body>
     </html>
   );
