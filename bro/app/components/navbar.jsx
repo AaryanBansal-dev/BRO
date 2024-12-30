@@ -1,17 +1,37 @@
 'use client';
 import React, { useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
-const NavItem = ({ href, children }) => (
-  <a
-    href={href}
-    className="text-[#f8fafc] hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium"
-  >
-    {children}
-  </a>
-);
+const NavItem = ({ href, children }) => {
+  const pathname = usePathname();
+  const isActive = pathname === href;
+
+  return (
+    <Link
+      href={href}
+      className={`${
+        isActive ? 'text-blue-400 font-semibold' : 'text-[#f8fafc] hover:text-gray-300'
+      } px-3 py-2 rounded-md text-sm font-medium`}
+    >
+      {children}
+    </Link>
+  );
+};
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const navItems = [
+    { href: '/', label: 'Home' },
+    { href: '/introduction', label: 'Introduction' },
+    { href: '/features', label: 'Features' },
+    { href: '/materials', label: 'Materials' },
+    { href: '/procedure', label: 'Procedure' },
+    { href: '/video', label: 'Video' },
+    { href: '/help-desk', label: 'Help Desk' },
+  ];
 
   return (
     <nav className="bg-[#020617]">
@@ -19,19 +39,17 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <a href="/" className="text-[#f8fafc] font-bold text-xl">
-              <img src="favicon.ico" alt="" height={50} width={50}/>
-              </a>
+              <Link href="/" className="text-[#f8fafc] font-bold text-xl">
+                <Image src="/favicon.ico" alt="" height={50} width={50} />
+              </Link>
             </div>
             <div className="hidden md:block ml-10">
               <div className="flex items-baseline space-x-4">
-                <NavItem href="/">Home</NavItem>
-                <NavItem href="/introduction">Introduction</NavItem>
-                <NavItem href="/features">Features</NavItem>
-                <NavItem href="/materials">Materials</NavItem>
-                <NavItem href="/procedure">Procedure</NavItem>
-                <NavItem href="/video">Video</NavItem>
-                <NavItem href="/help-desk">Help Desk</NavItem>
+                {navItems.map((item) => (
+                  <NavItem key={item.href} href={item.href}>
+                    {item.label}
+                  </NavItem>
+                ))}
               </div>
             </div>
           </div>
@@ -82,13 +100,11 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-[#020617]">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <NavItem href="/">Home</NavItem>
-            <NavItem href="/introduction">Introduction</NavItem>
-            <NavItem href="/features">Features</NavItem>
-            <NavItem href="/materials">Materials</NavItem>
-            <NavItem href="/procedure">Procedure</NavItem>
-            <NavItem href="/video">Video</NavItem>
-            <NavItem href="/help-desk">Help Desk</NavItem>
+            {navItems.map((item) => (
+              <NavItem key={item.href} href={item.href}>
+                {item.label}
+              </NavItem>
+            ))}
           </div>
         </div>
       )}
@@ -97,3 +113,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

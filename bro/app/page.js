@@ -13,7 +13,7 @@ const page = () => {
           <li className="px-24 py-2 text-lg"><b>Survivability Measures:</b> It may incorporate features to provide oxygen, monitor the victim’s condition, and sustain them until they can be rescued.
           </li>
         </ul>
-        <p className="px-24 py-6 text-lg mb-11">This type of device would be a significant step forward in preventing fatalities in borewell accidents, which often involve complex and dangerous rescue operations due to the depth and narrowness of these wells.</p>
+        <p className="px-24 py-6 text-lg">This type of device would be a significant step forward in preventing fatalities in borewell accidents, which often involve complex and dangerous rescue operations due to the depth and narrowness of these wells.</p>
       </div>
   )
 }
