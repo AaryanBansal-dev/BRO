@@ -5,14 +5,14 @@ const page = () => {
     <div>
         <div className="py-[18]">
       <h1 className="py-[8] font-bold text-2xl text-slate-300 px-24">Mission Of BRO</h1>
-      <p className="px-24 text-lg py-2">The primary mission of the Borewell Rescue Operation (BRO) is to prevent loss of life, particularly in cases where children or animals accidentally fall into uncovered or abandoned borewells. These wells, often drilled for water or other purposes, are left open, posing a grave risk to human life due to their narrow diameter and extreme depths. The BRO device is committed to enhancing rescue efforts by providing a specialized tool that can be quickly deployed, ensuring victims are safely retrieved in the shortest time possible. <br></br>
+      <p className="px-24 text-lg py-2 text-slate-400">The primary mission of the Borewell Rescue Operation (BRO) is to prevent loss of life, particularly in cases where children or animals accidentally fall into uncovered or abandoned borewells. These wells, often drilled for water or other purposes, are left open, posing a grave risk to human life due to their narrow diameter and extreme depths. The BRO device is committed to enhancing rescue efforts by providing a specialized tool that can be quickly deployed, ensuring victims are safely retrieved in the shortest time possible. <br></br>
 
     BRO's mission aligns with humanitarian goals of saving lives and improving safety standards in communities where borewell accidents are common. The focus is not just on rescue but also on educating communities about borewell safety and proper management to prevent future accidents.  </p>
         </div>
         <div>
             <h1 className="py-[15 ] font-bold text-2xl text-slate-300 px-24">Objectives of BRO</h1>
-            <p className="px-24 text-lg py-2">The Borewell Rescue Operation is designed around several key objectives to ensure it provides an effective and reliable solution for such emergencies:</p>
-            <ul className="px-24 text-lg py-2">
+            <p className="px-24 text-lg py-2 text-slate-400">The Borewell Rescue Operation is designed around several key objectives to ensure it provides an effective and reliable solution for such emergencies:</p>
+            <ul className="px-24 text-lg py-2 text-slate-400">
                 <li><b>• Efficient Rescue:</b> The primary objective is to reduce the time taken to rescue victims. Borewell rescues are time-sensitive, and delays can be fatal. The BRO system is built to be rapidly deployed and to minimize the time between the start of the rescue operation and the successful retrieval of the victim.
                 </li>
                 <li><b>• Minimizing Risks to Victims:</b>  Rescuing individuals from deep and narrow borewells presents numerous risks, including suffocation, injuries, and other hazards. BRO's design ensures that victims are stabilized while rescue operations are carried out, minimizing further injuries or stress during the retrieval process.</li>

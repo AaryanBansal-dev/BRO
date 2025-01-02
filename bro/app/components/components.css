@@ -7,3 +7,6 @@ footer {
     text-align: center;
     top: 92%
  }
+ input::placeholder {
+    /* color: #0f172a; */
+ }
