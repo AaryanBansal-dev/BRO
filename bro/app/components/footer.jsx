@@ -17,7 +17,7 @@ const Footer = () => {
           </ul>
         </nav>
         <div className="text-center text-sm">
-          <p>&copy; {currentYear} Copyright Reserved By BRO</p>
+          <p>&copy; 2024 Copyright Reserved By BRO</p>
         </div>
       </div>
     </footer>
